@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Zenteno | Café de Especialidad, Repostería y Cowork</title>
+  
+  <!-- Metadatos SEO -->
+  <meta name="description" content="Cafetería Zenteno ofrece café de especialidad de altura, métodos de extracción artesanales, repostería 100% casera y un ambiente acogedor para cowork en la ciudad.">
+  <meta name="keywords" content="cafetería, café de especialidad, espresso bar, cold brew, brunch, repostería artesanal, Zenteno, cowork">
+  <meta name="author" content="Cafetería Zenteno Team">
+
+  <!-- Fuentes de Google: Playfair Display e Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos Personalizados Zenteno -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <!-- =========================================================================
+       1. BARRA DE NAVEGACIÓN (Sticky con efecto scroll dinámico jQuery)
+       ========================================================================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-zenteno" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">
+          <i class="bi bi-cup-hot-fill text-warning"></i>
+          <span>Zenteno</span>
+          <span class="brand-badge">Specialty</span>
+        </a>
+        
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar navegación">
+          <i class="bi bi-list fs-2 text-warning"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#historia">Nuestra Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="#reservas" class="btn btn-zenteno-cta">
+              <i class="bi bi-calendar2-check-fill me-1"></i> Reservar Mesa
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO SECTION
+       ========================================================================= -->
+  <main>
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="hero-subtitle-tag">
+              <i class="bi bi-patch-check-fill"></i> Café de Especialidad & Origen
+            </div>
+            <h1 class="hero-title">
+              El Arte del Buen Café en <span>Zenteno</span>
+            </h1>
+            <p class="hero-desc">
+              Granos de altura seleccionados, métodos de extracción artesanales y repostería 100% casera. Creamos una atmósfera cálida e inspiradora para tus pausas, reuniones y sesiones de cowork.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#menu" class="btn btn-zenteno-cta btn-lg px-4">
+                <i class="bi bi-book-half me-1"></i> Explorar Carta
+              </a>
+              <a href="#reservas" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+                <i class="bi bi-clock-history me-1"></i> Reservar Espacio
+              </a>
+            </div>
+
+            <!-- Features destacadas -->
+            <div class="hero-features">
+              <div class="feature-pill">
+                <i class="bi bi-gem"></i>
+                <span>Granos 100% Arábica</span>
+              </div>
+              <div class="feature-pill">
+                <i class="bi bi-fire"></i>
+                <span>Tueste Artesanal Fresco</span>
+              </div>
+              <div class="feature-pill">
+                <i class="bi bi-droplet-half"></i>
+                <span>Filtrados V60 & Cold Brew</span>
+              </div>
+              <div class="feature-pill">
+                <i class="bi bi-wifi"></i>
+                <span>Zona Cowork con Alta Velocidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. MENÚ INTERACTIVO (Filtro Dinámico con jQuery)
+         ========================================================================= -->
+    <section class="section-padding" id="menu">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="section-tag">Nuestra Carta de Temporada</span>
+          <h2 class="section-title">Sabores Que Despiertan Sentidos</h2>
+          <p class="text-muted max-w-600 mx-auto">
+            Selecciona una categoría para filtrar nuestras preparaciones en tiempo real sin recargar la página.
+          </p>
+        </div>
+
+        <!-- Botones de Filtrado Dinámico -->
+        <div class="menu-filter-nav">
+          <button type="button" class="btn-filter active" data-filter="all">
+            <i class="bi bi-grid-fill"></i> Todos los Productos
+          </button>
+          <button type="button" class="btn-filter" data-filter="cafes-calientes">
+            <i class="bi bi-cup-hot"></i> Cafés Calientes
+          </button>
+          <button type="button" class="btn-filter" data-filter="bebidas-frias">
+            <i class="bi bi-snow"></i> Bebidas Frías & Frappés
+          </button>
+          <button type="button" class="btn-filter" data-filter="reposteria">
+            <i class="bi bi-cake2"></i> Repostería y Panadería
+          </button>
+          <button type="button" class="btn-filter" data-filter="desayunos-brunch">
+            <i class="bi bi-egg-fried"></i> Desayunos & Brunch
+          </button>
+        </div>
+
+        <!-- Cuadrícula de Productos de la Carta -->
+        <div class="row g-4" id="menuGrid">
+          
+          <!-- Item 1: Espresso Doble -->
+          <div class="col-md-6 col-lg-4 menu-item-col cafes-calientes">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80" alt="Espresso Doble Zenteno" loading="lazy">
+                <span class="menu-badge">Insignia</span>
+                <span class="menu-price">$3.50</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-gear-wide-connected"></i> Espresso 9 Bar (La Marzocco)
+                </div>
+                <h3 class="menu-card-title">Espresso Doble Zenteno</h3>
+                <p class="menu-card-desc">
+                  Extracción corta de 36ml con notas balanceadas a chocolate amargo, avellanas tostadas y crema persistente.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Tueste medio-oscuro, acidez cítrica suave y cuerpo sedoso." data-allergens="Ninguno (100% café puro).">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 2: Flat White Austral -->
+          <div class="col-md-6 col-lg-4 menu-item-col cafes-calientes">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80" alt="Flat White Austral" loading="lazy">
+                <span class="menu-badge">Favorito</span>
+                <span class="menu-price">$4.20</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-droplet-fill"></i> Doble Ristretto + Microespuma
+                </div>
+                <h3 class="menu-card-title">Flat White Austral</h3>
+                <p class="menu-card-desc">
+                  Intensidad del café de especialidad combinada con leche texturizada aterciopelada y arte latte artesanal.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Dulzor lácteo natural, toques de caramelo y postgusto prolongado." data-allergens="Contiene lactosa (opción vegetal: avena o almendra disponible).">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 3: Pour Over V60 -->
+          <div class="col-md-6 col-lg-4 menu-item-col cafes-calientes">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" alt="Filtrado Pour Over V60" loading="lazy">
+                <span class="menu-badge">Especialidad</span>
+                <span class="menu-price">$4.80</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-funnel-fill"></i> Hario V60 Artesanal
+                </div>
+                <h3 class="menu-card-title">Filtrado Pour Over V60</h3>
+                <p class="menu-card-desc">
+                  Infusión manual gota a gota con grano Geisha de altura. Revela notas florales de jazmín y durazno fresco.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Taza limpia, acidez brillante y aromas florales complejos." data-allergens="Ninguno.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 4: Nitro Cold Brew -->
+          <div class="col-md-6 col-lg-4 menu-item-col bebidas-frias">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=600&q=80" alt="Nitro Cold Brew Zenteno" loading="lazy">
+                <span class="menu-badge">Exclusivo</span>
+                <span class="menu-price">$4.90</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-snow2"></i> Maceración 18h + Nitrógeno
+                </div>
+                <h3 class="menu-card-title">Nitro Cold Brew Zenteno</h3>
+                <p class="menu-card-desc">
+                  Maceración fría lenta con infusión de nitrógeno puro para una textura similar a cerveza negra con espuma sedosa.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Extremadamente refrescante, baja acidez, notas de cacao negro." data-allergens="Sin azúcar añadido, sin gluten.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 5: Iced Caramel Macchiato -->
+          <div class="col-md-6 col-lg-4 menu-item-col bebidas-frias">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&q=80" alt="Iced Caramel Macchiato" loading="lazy">
+                <span class="menu-badge">Popular</span>
+                <span class="menu-price">$4.60</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-ice-cream"></i> Shot sobre Hielo & Vainilla
+                </div>
+                <h3 class="menu-card-title">Iced Caramel Macchiato</h3>
+                <p class="menu-card-desc">
+                  Leche fresca fría, sirope casero de vainilla de Madagascar, shot de espresso doble y espiral de caramelo salado.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Contraste térmico perfecto entre el espresso tibio y el hielo picado." data-allergens="Lácteos.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 6: Tonic Espresso Cítrico -->
+          <div class="col-md-6 col-lg-4 menu-item-col bebidas-frias">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Tonic Espresso Cítrico" loading="lazy">
+                <span class="menu-badge">Refrescante</span>
+                <span class="menu-price">$4.50</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-brightness-high"></i> Tónica Prémium + Espresso
+                </div>
+                <h3 class="menu-card-title">Tonic Espresso Cítrico</h3>
+                <p class="menu-card-desc">
+                  Agua tónica artesanal con notas botánicas, rodaja de toronja deshidratada y vertido en cascada de espresso.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Burbuja efervescente que amplifica las notas afrutadas del café." data-allergens="Sin alérgenos.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 7: Croissant Almendrado -->
+          <div class="col-md-6 col-lg-4 menu-item-col reposteria">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Croissant Almendrado" loading="lazy">
+                <span class="menu-badge">Horneado Hoy</span>
+                <span class="menu-price">$3.80</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-basket-fill"></i> Masa Laminada con Mantequilla
+                </div>
+                <h3 class="menu-card-title">Croissant Almendrado Crujiente</h3>
+                <p class="menu-card-desc">
+                  Hojaldre francés crujiente por fuera y tierno por dentro, relleno de crema frangipane y almendras tostadas al horno.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Maridaje sugerido: Cappuccino o Flat White caliente." data-allergens="Gluten, frutos secos (almendras), lácteos, huevo.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 8: Tarta de Queso Vasca -->
+          <div class="col-md-6 col-lg-4 menu-item-col reposteria">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Tarta de Queso Vasca" loading="lazy">
+                <span class="menu-badge">Top Ventas</span>
+                <span class="menu-price">$5.50</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-fire"></i> Horno Alto Caramelizado
+                </div>
+                <h3 class="menu-card-title">Tarta de Queso Vasca</h3>
+                <p class="menu-card-desc">
+                  Superficie tostada caramelizada con un corazón cremoso y fluido, elaborada con tres variedades selectas de queso.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Maridaje ideal: Filtrado V60 o Cold Brew Nitro." data-allergens="Lácteos, huevo.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 9: Tostada Campesina con Huevo Poché -->
+          <div class="col-md-6 col-lg-4 menu-item-col desayunos-brunch">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" alt="Tostada Campesina Poché" loading="lazy">
+                <span class="menu-badge">Recomendado</span>
+                <span class="menu-price">$6.80</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-egg-fill"></i> Pan de Masa Madre 48h
+                </div>
+                <h3 class="menu-card-title">Tostada con Huevo Poché</h3>
+                <p class="menu-card-desc">
+                  Rebanada rústica tostada con puré de palta/aguacate con lima, tomates cherry confitados y huevo pochado de campo.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="Opción balanceada y nutritiva para comenzar la mañana." data-allergens="Gluten, huevo, semillas de sésamo.">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Item 10: Açaí Energy Bowl -->
+          <div class="col-md-6 col-lg-4 menu-item-col desayunos-brunch">
+            <article class="menu-card">
+              <div class="menu-card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=600&q=80" alt="Açaí Energy Bowl" loading="lazy">
+                <span class="menu-badge">Vegano</span>
+                <span class="menu-price">$6.20</span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-extraction-tag">
+                  <i class="bi bi-heart-pulse-fill"></i> Bowl Nutritivo
+                </div>
+                <h3 class="menu-card-title">Açaí Energy Bowl Orgánico</h3>
+                <p class="menu-card-desc">
+                  Açaí batido con plátano y leche vegetal, cubierto de granola artesanal crocante, frutos rojos frescos y semillas de chía.
+                </p>
+                <button type="button" class="btn btn-card-detail" data-notes="100% natural, antioxidante y libre de azúcares refinados." data-allergens="Frutos secos en granola (nueces y avena).">
+                  <i class="bi bi-info-circle me-1"></i> Ver Detalles y Maridaje
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. NUESTRA HISTORIA & FILOSOFÍA
+         ========================================================================= -->
+    <section class="section-padding history-section" id="historia">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="history-card-img">
+              <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Tostaduría y Filosofía Cafetería Zenteno" class="img-fluid w-100" loading="lazy">
+              <div class="history-experience-badge">
+                <h4>100%</h4>
+                <p class="mb-0 text-white-50 small">Granos de Altura Sostenibles</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="section-tag">Nuestros Orígenes</span>
+            <h2 class="section-title">Pasión, Tostado Propio y Cultura Cafetera</h2>
+            <p class="lead text-muted">
+              Cafetería Zenteno nació con el propósito de conectar a las personas con el origen auténtico del café.
+            </p>
+            <p class="text-secondary">
+              Colaboramos directamente con caficultores que cultivan variedades arábicas por encima de los 1.600 msnm. Cada microlote es tostado en pequeños baches semanales para respetar las notas naturales de cata: desde perfiles cítricos y florales hasta intensidades a cacao y caramelo.
+            </p>
+            <p class="text-secondary">
+              Creemos firmemente en el poder de la comunidad: nuestro espacio está concebido tanto para el disfrute pausado de una taza como para el trabajo productivo con conexión de fibra óptica y estaciones ergonómicas.
+            </p>
+            
+            <div class="row g-3 mt-2">
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-award-fill text-warning fs-4"></i>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Baristas SCA</h6>
+                    <small class="text-muted">Certificación mundial</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-recycle text-success fs-4"></i>
+                  <div>
+                    <h6 class="mb-0 fw-bold">Sostenibilidad</h6>
+                    <small class="text-muted">Empaques compostables</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. GALERÍA & AMBIENTE COWORK
+         ========================================================================= -->
+    <section class="section-padding" id="galeria">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-tag">Espacio & Momentos</span>
+          <h2 class="section-title">El Ambiente Zenteno</h2>
+          <p class="text-muted max-w-600 mx-auto">
+            Un refugio urbano de luz natural, música acústica seleccionada y aroma a café recién molido.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Barra de Baristas Zenteno" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Barra de Extracción Artesanal</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Zona de Cowork" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Espacios Cómodos de Cowork</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" alt="Tazas de Especialidad" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Diseño en Cada Detalle</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Horneado Fresco" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Repostería del Día</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Método Pour Over" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Filtrado Lento Manual</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="gallery-item">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Atmósfera Acogedora" loading="lazy">
+              <div class="gallery-overlay">
+                <h6 class="text-white mb-0">Luz Natural y Calidez</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. CONTACTO & RESERVAS (Formulario Validado con jQuery y Alerta Animada)
+         ========================================================================= -->
+    <section class="section-padding reservations-section" id="contacto">
+      <div class="container" id="reservas">
+        <div class="text-center mb-5">
+          <span class="section-tag">Agenda Tu Visita</span>
+          <h2 class="section-title">Reserva de Mesas & Contacto</h2>
+          <p class="text-muted max-w-600 mx-auto">
+            Asegura tu lugar para reuniones de trabajo, estudio o un brunch especial. Sin costo de reserva previa.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Columna del Formulario de Reserva -->
+          <div class="col-lg-7">
+            <div class="reservation-card">
+              <h3 class="h4 mb-4 fw-bold">
+                <i class="bi bi-calendar2-heart text-warning me-2"></i>Formulario de Reserva
+              </h3>
+
+              <!-- Contenedor de Alerta Animada tras envío exitoso -->
+              <div class="alert alert-success border-success" id="reservationAlert" role="alert">
+                <!-- Se poblará dinámicamente con jQuery -->
+              </div>
+
+              <form id="reservationForm" novalidate>
+                <div class="row g-3">
+                  <!-- Nombre Completo -->
+                  <div class="col-md-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="resName" placeholder="Nombre completo" required>
+                      <label for="resName"><i class="bi bi-person me-1"></i>Nombre y Apellido</label>
+                      <div class="invalid-feedback">Por favor ingresa tu nombre completo (mínimo 3 letras).</div>
+                    </div>
+                  </div>
+
+                  <!-- Correo Electrónico -->
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="resEmail" placeholder="nombre@correo.com" required>
+                      <label for="resEmail"><i class="bi bi-envelope me-1"></i>Correo Electrónico</label>
+                      <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                    </div>
+                  </div>
+
+                  <!-- Teléfono -->
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="tel" class="form-control" id="resPhone" placeholder="+591 70000000" required>
+                      <label for="resPhone"><i class="bi bi-telephone me-1"></i>Teléfono de Contacto</label>
+                      <div class="invalid-feedback">Ingresa un número telefónico de contacto válido.</div>
+                    </div>
+                  </div>
+
+                  <!-- Fecha de Reserva -->
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <input type="date" class="form-control" id="resDate" required>
+                      <label for="resDate"><i class="bi bi-calendar-event me-1"></i>Fecha</label>
+                      <div class="invalid-feedback">Selecciona una fecha válida a partir de hoy.</div>
+                    </div>
+                  </div>
+
+                  <!-- Hora de Reserva -->
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <input type="time" class="form-control" id="resTime" min="08:00" max="21:00" required>
+                      <label for="resTime"><i class="bi bi-clock me-1"></i>Hora (08:00 a 21:00)</label>
+                      <div class="invalid-feedback">Horario disponible entre 08:00 y 21:00 hrs.</div>
+                    </div>
+                  </div>
+
+                  <!-- Cantidad de Personas -->
+                  <div class="col-md-4">
+                    <div class="form-floating">
+                      <select class="form-select" id="resGuests" required>
+                        <option value="1">1 Persona</option>
+                        <option value="2" selected>2 Personas</option>
+                        <option value="3">3 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="5">5 Personas</option>
+                        <option value="6">6 Personas</option>
+                        <option value="7">7 Personas</option>
+                        <option value="8">8 Personas (Mesa Cowork)</option>
+                        <option value="9">9 Personas</option>
+                        <option value="10">10 Personas (Reunión Grupal)</option>
+                        <option value="11">11 Personas</option>
+                        <option value="12">12 Personas (Aforo Máximo)</option>
+                      </select>
+                      <label for="resGuests"><i class="bi bi-people me-1"></i>Personas</label>
+                      <div class="invalid-feedback">Selecciona la cantidad de comensales.</div>
+                    </div>
+                  </div>
+
+                  <!-- Solicitudes Especiales -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Peticiones especiales" id="resNotes" style="height: 100px"></textarea>
+                      <label for="resNotes"><i class="bi bi-chat-left-text me-1"></i>Petición especial (Mesa cerca de enchufes, cumpleaños, etc.)</label>
+                    </div>
+                  </div>
+
+                  <!-- Botón Enviar -->
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-zenteno-cta btn-lg w-100 py-3">
+                      <i class="bi bi-send-check-fill me-2"></i>Confirmar Solicitud de Reserva
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Columna Lateral de Información y Ubicación -->
+          <div class="col-lg-5">
+            <div class="info-sidebar-card">
+              <h3 class="h4 mb-4">Información & Horarios</h3>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold text-white">Dirección</h6>
+                  <p class="mb-0 text-white-50">Calle Zenteno #450, Casco Central, Ciudad.</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-clock-fill"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold text-white">Horario de Atención</h6>
+                  <p class="mb-0 text-white-50">Lunes a Sábado: 07:30 - 21:30 hrs</p>
+                  <p class="mb-0 text-white-50">Domingos y Feriados: 08:30 - 20:00 hrs</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-telephone-inbound-fill"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold text-white">Línea Directa & WhatsApp</h6>
+                  <p class="mb-0 text-white-50">+591 765-43210 / (591-2) 2234567</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="bi bi-envelope-at-fill"></i>
+                </div>
+                <div>
+                  <h6 class="mb-1 fw-bold text-white">Correo Institucional</h6>
+                  <p class="mb-0 text-white-50">contacto@cafeteriazenteno.com</p>
+                </div>
+              </div>
+
+              <hr class="border-secondary my-4">
+
+              <!-- Mapa Representativo / Ilustrativo -->
+              <div class="rounded-3 overflow-hidden shadow-sm" style="height: 140px; background-color: #24140b;">
+                <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-3">
+                  <i class="bi bi-pin-map-fill text-warning fs-3 mb-1"></i>
+                  <span class="text-white small fw-bold">Ubicación Estratégica en el Centro</span>
+                  <span class="text-white-50 small">A 2 cuadras de la estación principal de metro/bus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       7. FOOTER
+       ========================================================================= -->
+  <footer class="footer-zenteno">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-5">
+          <div class="footer-brand mb-3">
+            <i class="bi bi-cup-hot-fill text-warning me-2"></i>Cafetería Zenteno
+          </div>
+          <p class="text-white-50 mb-3">
+            Cafetería de especialidad enfocada en ofrecer granos de altura seleccionados, métodos de extracción artesanales y repostería casera. Un espacio moderno para los amantes del buen café.
+          </p>
+          <div class="d-flex">
+            <a href="#" class="social-circle-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-circle-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-circle-btn" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="social-circle-btn" aria-label="TripAdvisor"><i class="bi bi-compass"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h5 class="text-white fw-bold mb-3">Navegación Rápida</h5>
+          <div class="footer-links">
+            <a href="#inicio">Inicio</a><br>
+            <a href="#menu">Nuestra Carta</a><br>
+            <a href="#historia">Orígenes & Tostaduría</a><br>
+            <a href="#galeria">Galería Fotográfica</a><br>
+            <a href="#reservas">Reserva Online</a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-6">
+          <h5 class="text-white fw-bold mb-3">Ficha Académica</h5>
+          <p class="text-white-50 small mb-1">
+            <strong>Asignatura:</strong> Diseño Web II
+          </p>
+          <p class="text-white-50 small mb-1">
+            <strong>Docente:</strong> Ing. Juan Carlos Huanto Villca
+          </p>
+          <p class="text-white-50 small mb-1">
+            <strong>Arquitectura:</strong> HTML5, Bootstrap 5.3.3, jQuery 3.7.1, C# (.NET) & PostgreSQL.
+          </p>
+          <p class="text-white-50 small">
+            <strong>Proyecto:</strong> Caso de Estudio Cafetería Zenteno
+          </p>
+        </div>
+      </div>
+
+      <hr class="border-secondary mt-5 mb-4 opacity-25">
+
+      <div class="row align-items-center small text-white-50">
+        <div class="col-md-6 text-center text-md-start">
+          &copy; <span id="currentYear"></span> Cafetería Zenteno. Todos los derechos reservados.
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          Diseñado con estándares W3C y accesibilidad web.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       8. MODAL DE DETALLE DEL PRODUCTO (Bootstrap 5 & jQuery)
+       ========================================================================= -->
+  <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="modalProductTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content overflow-hidden border-0 shadow-lg">
+        <div class="modal-header modal-product-header">
+          <h5 class="modal-title font-heading" id="modalProductTitle">Detalle del Producto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body p-4">
+          <img id="modalProductImg" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22600%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%232c1810%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20fill%3D%22%23d4a373%22%20text-anchor%3D%22middle%22%20dy%3D%22.3em%22%20font-family%3D%22sans-serif%22%20font-size%3D%2220%22%3ECafeter%C3%ADa%20Zenteno%3C%2Ftext%3E%3C%2Fsvg%3E" alt="Detalle del Producto" class="modal-product-img mb-3 shadow-sm">
+          
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge bg-warning text-dark px-3 py-2 fw-bold" id="modalProductBadge">Especialidad</span>
+            <span class="fs-4 fw-bold text-success" id="modalProductPrice">$0.00</span>
+          </div>
+
+          <p class="text-muted small mb-2" id="modalProductExtraction">
+            <i class="bi bi-gear-fill me-1"></i> Método
+          </p>
+
+          <p class="text-secondary mb-3" id="modalProductDesc">
+            Descripción completa del producto.
+          </p>
+
+          <div class="bg-light p-3 rounded-3 mb-2">
+            <h6 class="fw-bold mb-1"><i class="bi bi-cup-straw text-warning me-1"></i>Notas de Cata / Preparación:</h6>
+            <p class="small text-muted mb-0" id="modalProductNotes">Detalles del perfil organoléptico.</p>
+          </div>
+
+          <div class="bg-light p-3 rounded-3">
+            <h6 class="fw-bold mb-1"><i class="bi bi-exclamation-triangle text-danger me-1"></i>Alérgenos & Dietas:</h6>
+            <p class="small text-muted mb-0" id="modalProductAllergens">Sin alérgenos conocidos.</p>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#reservas" class="btn btn-zenteno-cta" id="btnModalReserveProduct" data-bs-dismiss="modal">
+            <i class="bi bi-bag-plus me-1"></i> Pedir en Reserva
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SCRIPTS: jQuery 3.7.1, Bootstrap 5.3.3 Bundle y Lógica Zenteno
+       ========================================================================= -->
+  <!-- jQuery 3.7.1 -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  
+  <!-- Bootstrap 5.3.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Lógica Dinámica Zenteno -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/reservations.js"></script>
+</body>
+</html>
